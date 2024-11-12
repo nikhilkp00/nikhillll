@@ -12,11 +12,11 @@ jobs:
   steps:
     # Step 1: Checkout the code
     - name: Checkout code
-    uses: actions/checkout@v2
+      uses: actions/checkout@v2
 
     # Step 2: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-      github_token: ${{ secrets.GITHUB_TOKEN }} # This is a secret GitHub token that is auto-provided by GitHub
-      publish_dir: ./ # The directory to publish, in this case, the root folder
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }} # This is a secret GitHub token that is auto-provided by GitHub
+        publish_dir: ./ # The directory to publish, in this case, the root folder
